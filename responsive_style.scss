@@ -1,0 +1,248 @@
+@import "./assets/devtz007/sass/flex_lib";
+
+/*-------------------------------------------------*\
+                 body
+\*-------------------------------------------------*/
+body {
+  position: relative;
+}
+/*-------------------------------------------------*\
+                 header
+\*-------------------------------------------------*/
+#header {
+  %--font-size {
+    font-size: 1rem;
+    font-weight: 700;
+    @media screen and (max-width: 500px) {
+      & {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+
+  #gameinfo {
+    @include flex-cen-row;
+    padding: 0 10px;
+    height: 10vh;
+    .time-cont {
+      @extend %--font-size;
+    }
+    #gamename {
+      @extend %--font-size;
+    }
+    .move-count-cont {
+      @extend %--font-size;
+    }
+  }
+
+  #settingsinfo {
+    @extend %--font-size;
+    width: 100%;
+    height: 100%;
+
+    .settingsitem {
+      @include flex-cen;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 130%;
+        margin-left: -15%;
+        height: 10px;
+        box-shadow: 0 0 2em 0.5em #3d9c4b;
+        bottom: 0em;
+        z-index: -1;
+        transition: bottom 300ms;
+      }
+    }
+  }
+}
+//active
+body[expanded="true"] #gameinfo {
+  margin-top: calc(0px - var(--headers-height));
+}
+/*-------------------------------------------------*\
+                 main
+\*-------------------------------------------------*/
+#main {
+  @include flex-top;
+  top: var(--headers-height);
+  @media screen and (max-width: 500px) {
+    & {
+      @include flex-cen;
+    }
+  }
+}
+#buttonwrapper {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  @media screen and (max-width: 500px) {
+    & {
+      @include flex-row;
+    }
+  }
+  .btn {
+    width: 35px;
+    height: 35px;
+  }
+  #hintbutton {
+    &::before {
+      @include flex-cen;
+      content: attr(data-hints);
+      position: absolute;
+      color: white;
+      text-align: center;
+      width: 13px;
+      height: 13px;
+      padding: 0px;
+      font-size: 10px;
+      line-height: normal;
+      border-radius: 50%;
+      top: -3px;
+      left: 60%;
+      margin: 0;
+    }
+  }
+}
+/*-------------------------------------------------*\
+                 #gamecontainer
+\*-------------------------------------------------*/
+#gamecontainer {
+  @include flex-cen-col;
+  //background-color: black;
+  width: 90vw;
+  height: 70vh;
+  margin-top: 50px;
+  .contentbar {
+    @include flex-row-justify-space-between;
+    gap: 5px;
+    margin-top: 15px;
+    width: 80%;
+    height: auto;
+    //background-color: #3d9c4b;
+    @media screen and (max-width: 500px) {
+      & {
+        width: 90%;
+      }
+    }
+    .pile {
+      width: 10em;
+      height: auto;
+      margin-left: 0em;
+      border-radius: 0.5em;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    & {
+      margin-top: 0px;
+      //background-color: black;
+      width: 100vw;
+      height: 80vh;
+    }
+  }
+}
+
+/*-------------------------------------------------*\
+                 #gamecontainer
+\*-------------------------------------------------*/
+
+#actionscreen {
+  #showcase {
+    @media screen and (max-width: 500px) {
+      & {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 5px;
+        .showcaseitem {
+          @include flex-col;
+          width: 100%;
+          position: relative;
+          width: 100%;
+          height: 125px;
+          //background: rgba(255, 255, 255, 0.05);
+          margin: 0em;
+          left: 0em;
+          .solitairethumb {
+            flex: 5 1;
+            width: 100%;
+            height: calc(100% - 15px);
+          }
+          p {
+            @include flex-cen;
+            flex: 1 1 15px;
+            height: 15px;
+            font-size: 0.6rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .actionwrapper:nth-child(2) {
+    @media screen and (max-width: 900px) {
+      & {
+        #inputarea {
+          .lbl {
+            font-size: 1rem;
+          }
+          .inputitem {
+            font-size: 1rem;
+          }
+          margin: 0;
+          margin-top: 50px;
+          padding: 15px;
+          font-size: 120%;
+        }
+      }
+    }
+  }
+
+  .actionwrapper:nth-child(3) {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      line-height: normal;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      padding-bottom: 0;
+      border-bottom: 0px dashed rgba(255, 255, 255, 0.3);
+      line-height: normal;
+    }
+    p {
+      font-size: 1rem;
+      line-height: normal;
+    }
+    @media screen and (max-width: 900px) {
+      & {
+        h1 {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+/*-------------------------------------------------*\
+                 others
+\*-------------------------------------------------*/
+
+.d-none {
+  display: none !important;
+}
