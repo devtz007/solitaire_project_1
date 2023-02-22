@@ -13,7 +13,7 @@ body {
   %--font-size {
     font-size: 1rem;
     font-weight: 700;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 800px) {
       & {
         font-size: 0.8rem;
       }
@@ -73,7 +73,7 @@ body[expanded="true"] #gameinfo {
 #main {
   @include flex-top;
   top: var(--headers-height);
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     & {
       @include flex-cen;
     }
@@ -83,7 +83,7 @@ body[expanded="true"] #gameinfo {
   position: absolute;
   top: 10px;
   left: 0;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     & {
       @include flex-row;
     }
@@ -115,36 +115,36 @@ body[expanded="true"] #gameinfo {
                  #gamecontainer
 \*-------------------------------------------------*/
 #gamecontainer {
-  @include flex-cen-col;
+  //@include flex-cen-col;
   //background-color: black;
-  width: 90vw;
+  width: 100vw;
   height: 70vh;
   margin-top: 50px;
-  .contentbar {
-    @include flex-row-justify-space-between;
-    gap: 5px;
-    margin-top: 15px;
-    width: 80%;
-    height: auto;
-    //background-color: #3d9c4b;
-    @media screen and (max-width: 500px) {
-      & {
-        width: 90%;
-      }
-    }
-    .pile {
-      width: 10em;
-      height: auto;
-      margin-left: 0em;
-      border-radius: 0.5em;
-    }
-  }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     & {
       margin-top: 0px;
       //background-color: black;
       width: 100vw;
       height: 80vh;
+    }
+  }
+  .contentbar {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    @media screen and (max-width: 800px) {
+      & {
+        gap: 0px;
+        margin-top: 15px;
+        width: 100%;
+        height: auto;
+        width: 100%;
+      }
+    }
+    .pile {
+      height: auto;
+      margin-left: 1em;
+      border-radius: 0.5em;
     }
   }
 }
@@ -155,7 +155,7 @@ body[expanded="true"] #gameinfo {
 
 #actionscreen {
   #showcase {
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 800px) {
       & {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
