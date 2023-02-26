@@ -20,7 +20,7 @@ body {
   font-size: 1rem;
   font-weight: 700;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #header #settingsinfo, #header #gameinfo .move-count-cont, #header #gameinfo #gamename, #header #gameinfo .time-cont {
     font-size: 0.8rem;
   }
@@ -69,7 +69,7 @@ body[expanded=true] #gameinfo {
   align-items: flex-start;
   top: var(--headers-height);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #main {
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@ body[expanded=true] #gameinfo {
   top: 10px;
   left: 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #buttonwrapper {
     display: flex;
     flex-direction: row;
@@ -119,7 +119,7 @@ body[expanded=true] #gameinfo {
   height: 70vh;
   margin-top: 50px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #gamecontainer {
     margin-top: 0px;
     width: 100vw;
@@ -131,7 +131,7 @@ body[expanded=true] #gameinfo {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #gamecontainer .contentbar {
     gap: 0px;
     margin-top: 15px;
@@ -142,14 +142,14 @@ body[expanded=true] #gameinfo {
 }
 #gamecontainer .contentbar .pile {
   height: auto;
-  margin-left: 1em;
+  margin-left: 0.2em;
   border-radius: 0.5em;
 }
 
 /*-------------------------------------------------*\
                  #gamecontainer
 \*-------------------------------------------------*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   #actionscreen #showcase {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

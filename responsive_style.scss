@@ -13,7 +13,7 @@ body {
   %--font-size {
     font-size: 1rem;
     font-weight: 700;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1400px) {
       & {
         font-size: 0.8rem;
       }
@@ -73,7 +73,7 @@ body[expanded="true"] #gameinfo {
 #main {
   @include flex-top;
   top: var(--headers-height);
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1400px) {
     & {
       @include flex-cen;
     }
@@ -83,7 +83,7 @@ body[expanded="true"] #gameinfo {
   position: absolute;
   top: 10px;
   left: 0;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1400px) {
     & {
       @include flex-row;
     }
@@ -120,7 +120,7 @@ body[expanded="true"] #gameinfo {
   width: 100vw;
   height: 70vh;
   margin-top: 50px;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1400px) {
     & {
       margin-top: 0px;
       //background-color: black;
@@ -132,7 +132,7 @@ body[expanded="true"] #gameinfo {
     margin-top: 15px;
     width: 100%;
     height: auto;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1400px) {
       & {
         gap: 0px;
         margin-top: 15px;
@@ -143,7 +143,7 @@ body[expanded="true"] #gameinfo {
     }
     .pile {
       height: auto;
-      margin-left: 1em;
+      margin-left: 0.2em;
       border-radius: 0.5em;
     }
   }
@@ -155,7 +155,7 @@ body[expanded="true"] #gameinfo {
 
 #actionscreen {
   #showcase {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1400px) {
       & {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

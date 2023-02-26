@@ -167,7 +167,7 @@ body[expanded="true"] #gamecontainer {
   border-radius: 0.5em;
   box-sizing: border-box;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   .pile,
   .cardwrapper,
   .card,
@@ -181,7 +181,13 @@ body[expanded="true"] #gamecontainer {
 .contentbar > .cardwrapper {
   margin-left: 1em;
 }
-
+@media screen and (max-width: 1400px) {
+.pile,
+.invisible,
+.contentbar > .cardwrapper {
+  margin-left: 0.2em;
+}
+}
 .invisible {
   z-index: -7;
 }
@@ -277,7 +283,7 @@ body[expanded="true"] #gamecontainer {
   margin-left: -100px;
   border-radius: 0.5em;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   .packet {
     margin-left: -14em;
   }
@@ -297,7 +303,7 @@ body[expanded="true"] #gamecontainer {
   pointer-events: none;
   transition: margin-right 300ms;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   .dump .card {
     margin-left: -14em;
   }
@@ -305,7 +311,7 @@ body[expanded="true"] #gamecontainer {
 .dump .card + .card + .card {
   margin-left: -100px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
   .dump .card + .card + .card {
     margin-left: -14em;
   }
