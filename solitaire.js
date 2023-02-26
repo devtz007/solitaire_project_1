@@ -1272,12 +1272,27 @@ function incMoves(){
   document.getElementById("movecount").innerHTML=moves;
 }
 
+
 function toggleAction(){
+      const settingInfoId = document.getElementById('settingsinfo');
+ 
+if (settingInfoId.style.display == "flex") {
+    settingInfoId.style.display = "none";
+} else {
+  settingInfoId.style.display = "flex";
+}
+
+
+
+
   var expanded=document.body.getAttribute("expanded")=="true";
   if (expanded){
+
+   
     if (tick){
       time+=(new Date().getTime()-interruptTime);
       timeCount();
+ 
     }
     setTimeout(function(){
       slideSettings(document.getElementsByClassName("settingsitem")[0],0);
@@ -1287,7 +1302,9 @@ function toggleAction(){
       });
     },500);
   }else{
+         
     interruptTime=new Date().getTime();
+
   }
   document.body.setAttribute("expanded",!expanded);
 }

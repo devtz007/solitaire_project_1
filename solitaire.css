@@ -132,7 +132,7 @@ body[expanded="true"] #gamecontainer {
 }
 
 #gamecontainer > div:first-of-type {
-  margin-top: 3em;
+  margin-top: 10em;
 }
 
 #gamecontainer > div:last-of-type {
@@ -173,6 +173,15 @@ body[expanded="true"] #gamecontainer {
   .card,
   .invisible {
     width: 14em;
+    height: 23em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pile,
+  .cardwrapper,
+  .card,
+  .invisible {
+    width: 15em;
     height: 23em;
   }
 }
@@ -596,7 +605,7 @@ body[expanded="true"] #actionscreen {
   background-image: url(https://picturelements.github.io/games/solitaire/solitaires.png);
   background-size: 200% 600%;
   width: 24em;
-  height: 12em;
+  height: 14em;
   top: 0.25em;
   left: 0.25em;
 }
@@ -636,8 +645,9 @@ body[expanded="true"] #actionscreen {
 }
 
 #inputarea {
-  margin: 5em 20%;
+  margin: 0;
   font-size: 120%;
+  padding: 120px 25px;
 }
 
 ::-webkit-scrollbar {

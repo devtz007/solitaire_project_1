@@ -11,10 +11,14 @@ body {
                  header
 \*-------------------------------------------------*/
 #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 75px;
+  padding: 0px 0;
 }
 #header #settingsinfo, #header #gameinfo .move-count-cont, #header #gameinfo #gamename, #header #gameinfo .time-cont {
   font-size: 1rem;
@@ -33,20 +37,29 @@ body {
 #header #gameinfo {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
-  height: 10vh;
+  width: 100%;
+  padding: 0;
 }
 #header #settingsinfo {
+  display: none;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 0;
 }
 #header #settingsinfo .settingsitem {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 100%;
 }
 #header #settingsinfo .settingsitem:after {
   position: absolute;
@@ -54,16 +67,11 @@ body {
   display: block;
   width: 130%;
   margin-left: -15%;
-  height: 10px;
+  height: 5px;
   box-shadow: 0 0 2em 0.5em #3d9c4b;
   bottom: 0em;
   z-index: -1;
   transition: bottom 300ms;
-}
-@media screen and (max-width: 800px) {
-  #header #settingsinfo .settingsitem:after {
-    height: 6px;
-  }
 }
 
 body[expanded=true] #gameinfo {
@@ -99,8 +107,8 @@ body[expanded=true] #gameinfo {
   }
 }
 #buttonwrapper .btn {
-  width: 35px;
-  height: 35px;
+  width: 75px;
+  height: 75px;
 }
 @media screen and (max-width: 900px) {
   #buttonwrapper .btn {
@@ -181,7 +189,7 @@ body[expanded=true] #gameinfo {
 \*-------------------------------------------------*/
 #actionscreen #showcase {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 5px;
   padding-bottom: 100px;
@@ -192,7 +200,7 @@ body[expanded=true] #gameinfo {
   width: 100%;
   position: relative;
   width: 100%;
-  height: 55vh;
+  height: 33vw;
   margin: 0em;
   left: 0em;
 }
@@ -248,10 +256,10 @@ body[expanded=true] #gameinfo {
     font-size: 120%;
   }
   #actionscreen .actionwrapper:nth-child(2) #inputarea .lbl {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   #actionscreen .actionwrapper:nth-child(2) #inputarea .inputitem {
-    font-size: 1rem;
+    font-size: 3rem;
   }
 }
 #actionscreen .actionwrapper:nth-child(3) h1 {
@@ -280,6 +288,19 @@ body[expanded=true] #gameinfo {
   #actionscreen .actionwrapper:nth-child(3) p {
     font-size: 0.8rem;
   }
+}
+
+#inputarea {
+  margin: 0;
+  margin-top: 150px;
+  padding: 15px;
+  font-size: 120%;
+}
+#inputarea .lbl {
+  font-size: 2.5rem;
+}
+#inputarea .inputitem {
+  font-size: 2.5rem;
 }
 
 /*-------------------------------------------------*\
