@@ -181,7 +181,7 @@ body[expanded="true"] #gamecontainer {
   .cardwrapper,
   .card,
   .invisible {
-    width: 15em;
+    width: 13.5em;
     height: 23em;
   }
 }
@@ -252,7 +252,7 @@ body[expanded="true"] #gamecontainer {
 .card span {
   display: block;
   position: absolute;
-  font-size: 140%;
+  font-size: 15px;
   padding: 0 0.1em;
   line-height: 1em;
 }
@@ -347,7 +347,7 @@ body[expanded="true"] #gamecontainer {
 }
 
 .card[data-value*="1"] span {
-  font-size: 130%;
+  font-size: 15px;
   padding: 0.075em;
 }
 
